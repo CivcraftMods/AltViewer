@@ -23,7 +23,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
 
-@Mod(modid="altviewer", name="Alt Viewer", version="v2.0")
+@Mod(modid="altviewer", name="Alt Viewer", version="v2.1")
 public class AltViewer {
 
 	private Minecraft mc;

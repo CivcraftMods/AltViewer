@@ -37,7 +37,7 @@ public class LookupCommand extends CommandBase {
 					altsBuilder.append(s).append(", ");
 				}
 				String alts = altsBuilder.toString();
-				sendMessage(EnumChatFormatting.GREEN + name + "'s alts are " + alts.substring(0, alts.length() - 2 ));
+				sendMessage(formatString(EnumChatFormatting.GREEN, name + "'s alts are " + alts.substring(0, alts.length() - 2 )));
 			} else {
 				sendMessage(EnumChatFormatting.GREEN + name + "'s main account is " + ass.getMain());
 			}
@@ -67,5 +67,13 @@ public class LookupCommand extends CommandBase {
 	private void sendMessage(String message) {
 		Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(message));
 	}
-
+	
+	private String formatString(EnumChatFormatting color, String message) {
+		List<String> lines = Minecraft.getMinecraft().fontRendererObj.listFormattedStringToWidth(message, Minecraft.getMinecraft().ingameGUI.getChatGUI().getChatWidth());
+		String out = "";
+		for(String s : lines) {
+			out += color + s;
+		}
+		return out;
+	}
 }
