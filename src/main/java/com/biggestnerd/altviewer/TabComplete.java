@@ -27,6 +27,9 @@ public class TabComplete {
 	}
 	
 	public String nextOption() {
+		if(possibleOptions.size() == 0 || possibleOptions == null) {
+			return startString;
+		}
 		if(index == possibleOptions.size() - 1) {
 			index = 0;
 		} else {
