@@ -128,6 +128,9 @@ public class GuiAssociationManager extends GuiScreen {
 				}
 				searchField.setText(completer.nextOption());
 			}
+			if(keyCode == Keyboard.KEY_DELETE || keyCode == Keyboard.KEY_BACK) {
+				completer = null;
+			}
 		}
 		if(keyCode == Keyboard.KEY_ESCAPE) {
 			mc.displayGuiScreen(parent);
