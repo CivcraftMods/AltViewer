@@ -17,9 +17,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "v2.1"
+version = "2.1"
 group= "com.biggestnerd.altviewer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "[1.8]AltViewer"
+archivesBaseName = "AltViewer"
 
 minecraft {
     version = "1.8-11.14.1.1404"
