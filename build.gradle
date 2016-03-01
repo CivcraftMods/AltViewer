@@ -69,15 +69,3 @@ processResources
         exclude 'mcmod.info'
     }
 }
-
-uploadArchives {
-	if (project.hasProperty("local_maven")) {
-		repositories {
-			logger.info('Publishing to local maven repo')
-
-			mavenDeployer {
-				repository(url: "file://${local_maven}")
-			}
-		}
-	}
-}
