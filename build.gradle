@@ -16,7 +16,6 @@ buildscript {
 }
 
 apply plugin: 'forge'
-apply plugin: 'maven-publish'
 
 version = "2.1"
 group= "com.biggestnerd.altviewer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
